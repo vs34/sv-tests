@@ -29,15 +29,17 @@ jobs:
       - name: License
         uses: SymbiFlow/actions/checks@main
         with:
-          third_party: |
-            ./third_party/cores/
-            ./third_party/tests/
-            ./third_party/tools/
           exclude_directory: |
+            ./third_party/tests/vloghammer/
+            third_party/tests/vloghammer/**
             ./.git/
             ./.github/
             ./.dependabot/
             ./miniconda.sh
             ./build/
-            ./third_party/tests/vloghammer/
+          third_party: |
+            ./third_party/cores/
+            ./third_party/tests/
+            ./third_party/tools/
+
 
