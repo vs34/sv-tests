@@ -176,6 +176,7 @@ jobs:
     runs-on: [ubuntu-latest]
     # runs-on: [self-hosted, Linux, X64, gcp-custom-runners]
     container: ubuntu:latest
+    needs: Run
     env:
       ANALYZER: "./tools/report_analyzer.py"
       GRAPHER: "./tools/history-graph"
