@@ -31,7 +31,6 @@ jobs:
         with:
           exclude_directory: |
             ./third_party/tests/vloghammer/
-            third_party/tests/vloghammer/**
             ./.git/
             ./.github/
             ./.dependabot/
@@ -39,7 +38,9 @@ jobs:
             ./build/
           third_party: |
             ./third_party/cores/
-            ./third_party/tests/
-            ./third_party/tools/
-
-
+            ./third_party/tests/axi-vip/
+            ./third_party/tests/easyUVM/
+            ./third_party/tests/hdlconvertor/
+            ./third_party/tests/projf-ecplore/
+            ./third_party/tools/utd-sv/
+            ./third_party/tests/uvm/
