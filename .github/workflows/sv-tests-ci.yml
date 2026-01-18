@@ -15,26 +15,12 @@ jobs:
       fail-fast: false
       matrix:
         tool:
-          - name: icarus
-            deps: autoconf autotools-dev bison flex libfl-dev gperf clang
-          - name: slang
-            deps: cmake pkg-config clang
+          - name: vloghammer
+            deps: bison clang tcl-dev flex libfl-dev pkg-config libreadline-dev
           # - name: surelog
           #   repo: Surelog
           #   submodules: third_party/UHDM third_party/antlr4 third_party/googletest
           #   deps: cmake default-jre pkg-config tclsh uuid-dev
-          - name: verible
-            deps: bazel=7.6.1 bison flex libfl-dev clang
-            runners_filter: Verible
-            skip-ccache: 1
-          - name: verilator
-            deps: autoconf autotools-dev bison flex help2man libfl-dev libelf-dev clang
-            make_jobs_max: 4
-          - name: yosys
-            deps: bison clang tcl-dev flex libfl-dev pkg-config libreadline-dev
-          - name: yosys-slang
-            deps: bison clang tcl-dev flex libfl-dev pkg-config libreadline-dev cmake pkg-config
-            submodules: third_party/slang third_party/fmt
           # - name: yosys-synlig
           #   repo: synlig
           #   submodules: third_party/yosys third_party/surelog
